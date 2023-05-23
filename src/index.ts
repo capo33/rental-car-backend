@@ -4,6 +4,7 @@ import cors from "cors";
 
 import { connectDB } from "./config/db";
 import authRoutes from "./routes/Auth.routes";
+import carRoutes from "./routes/Car.routes";
 
 // load env variables
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(cors());
 
 // Routes
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/cars", carRoutes);
 
 
 app.listen(port, () => {
